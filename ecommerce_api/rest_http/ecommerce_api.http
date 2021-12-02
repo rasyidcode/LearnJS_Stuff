@@ -1,0 +1,31 @@
+@base_url = http://localhost:5000
+
+post {{base_url}}/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "rcd2",
+    "email": "rcd2@test.com",
+    "password": "12345"
+}
+
+###
+
+post {{base_url}}/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "rcd2",
+    "password": "12345"
+}
+
+###
+
+put {{base_url}}/api/users/617c1b796caf97cf08342a4c2
+Content-Type: application/json
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxN2MxYjc5NmNhZjk3Y2YwODM0MmE0YyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MzU1MjU0MDMsImV4cCI6MTYzNTc4NDYwM30.eXpib9bPfH6PncYdxh78aMrtwebMf5JdFFOcBGGPcc4
+
+{
+    "username": "rcd2updated",
+    "password": "123456"
+}
